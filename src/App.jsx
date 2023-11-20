@@ -1,20 +1,22 @@
-import './App.css';
-import Content from './components/Contents';
-import CurrencyConverter from './components/CurrencyConverter';
-import Header from './components/Header';
-import Weather from './components/Weather';
-import Footer from './components/Footer';
+import React from 'react';
+import Header from './components/Header/Header';
+import { CssBaseline } from '@mui/material';
+import CurrencyConverter from './components/CurrencyConverter/CurrencyConverter';
+import Weather from './components/Weather/Weather';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
-function App() {
+const App = () => {
     return (
         <>
+            <CssBaseline />
             <Header />
             <CurrencyConverter />
             <Weather />
-            <Content />
+            <Main />
             <Footer />
         </>
     );
-}
+};
 
 export default App;
