@@ -1,28 +1,11 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 
-const styled = {
-    cardGrid: {
-        padding: '20px 0',
-    },
-    card: {
-        heigt: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-    },
-    cardMedia: {
-        paddingTop: '56.25%',
-    },
-    cardContent: {
-        flexGrow: 1,
-    },
-};
-
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const Main = () => {
     return (
-        <Container maxWidth='xl' sx={styled.cardGrid}>
+        <Container maxWidth='xl' sx={{ padding: '20px 0' }}>
             <Grid container sx={{ marginBottom: '1rem' }} spacing={2} justifyContent='center'>
                 <Grid item>
                     <Button variant='outline' color='primary'>
@@ -43,13 +26,13 @@ const Main = () => {
             <Grid container spacing={4}>
                 {cards.map((card) => (
                     <Grid item key={card} xs={12} md={3}>
-                        <Card sx={styled.card}>
+                        <Card sx={{ heigt: '100%', display: 'flex', flexDirection: 'column' }}>
                             <CardMedia
-                                sx={styled.cardMedia}
+                                sx={{ paddingTop: '56.25%' }}
                                 image='http://source.unsplash.com/random'
                                 title='Image title'
                             />
-                            <CardContent sx={styled.cardContent}>
+                            <CardContent sx={{ flexGrow: 1 }}>
                                 <Typography variant='h5' gutterBottom>
                                     Heading
                                 </Typography>
