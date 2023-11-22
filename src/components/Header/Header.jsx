@@ -1,11 +1,12 @@
-import { AppBar, Container, Toolbar, Typography } from '@mui/material';
-import React from 'react';
-import Search from './Search';
+import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
+import { useState } from 'react';
+import { AsyncPaginate } from 'react-select-async-paginate';
 
 const Header = () => {
-    const handleOnSearchChange = (searchData) => {
-        console.log(searchData);
-    };
+    const [search, setSearch] = useState('');
+
+    const handleOnChange = () => {};
+    const loadOptions = () => {};
     return (
         <AppBar position='relative'>
             <Toolbar>
@@ -13,7 +14,15 @@ const Header = () => {
                     <Typography variant='h3' align='center' gutterBottom>
                         Travel Advisor
                     </Typography>
-                    <Search />
+                    <Box sx={{ color: '#333', backgroundColor: '#fff' }}>
+                        <AsyncPaginate
+                            placeholder='Search for city...'
+                            debounceTimeout={600}
+                            value={search}
+                            onChange={handleOnChange}
+                            loadOptions={loadOptions}
+                        />
+                    </Box>
                 </Container>
             </Toolbar>
         </AppBar>
