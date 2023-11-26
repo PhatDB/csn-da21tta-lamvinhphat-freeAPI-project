@@ -1,12 +1,24 @@
 import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
 import { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
+import { getPlacesData } from '../../utils/fetchData';
 
-const Header = () => {
-    const [search, setSearch] = useState('');
+const Header = (props) => {
+    const { search, setSearch, handleOnChange } = props;
 
-    const handleOnChange = () => {};
-    const loadOptions = () => {};
+    const loadOptions = (input) => {
+        return getPlacesData(input).then((data) => {
+            return {
+                options: data.map((city) => {
+                    return {
+                        value: `${city.latitude} ${city.longitude}`,
+                        label: `${city.name}`,
+                    };
+                }),
+            };
+        });
+    };
+
     return (
         <AppBar position='relative'>
             <Toolbar>
