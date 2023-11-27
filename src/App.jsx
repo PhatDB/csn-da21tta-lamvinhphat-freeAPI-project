@@ -5,7 +5,7 @@ import Weather from './components/Weather/Weather';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import { useEffect, useState } from 'react';
-import { getCurrenWeatherData, getData } from './utils/fetchData';
+import { getCurrenWeatherData, getPlacesData } from './utils/fetchData';
 
 const App = () => {
     const [search, setSearch] = useState('');
@@ -17,11 +17,14 @@ const App = () => {
         setCoords({ lat: lat, lon: lon });
     };
 
-    useEffect(() => {
-        getData(coords).then((data) => {
+    useEffect(()=>{
+        getCurrenWeatherData(coords).then((data) => {
             console.log(data);
         });
-        getCurrenWeatherData(coords).then((data) => {
+    },[coords])
+
+    useEffect(() => {
+        getPlacesData(coords).then((data) => {
             console.log(data);
         });
     }, [coords]);

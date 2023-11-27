@@ -1,13 +1,12 @@
 import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
-import { useState } from 'react';
 import { AsyncPaginate } from 'react-select-async-paginate';
-import { getPlacesData } from '../../utils/fetchData';
+import { getCitiesData } from '../../utils/fetchData';
 
 const Header = (props) => {
-    const { search, setSearch, handleOnChange } = props;
+    const { search, handleOnChange } = props;
 
     const loadOptions = (input) => {
-        return getPlacesData(input).then((data) => {
+        return getCitiesData(input).then((data) => {
             return {
                 options: data.map((city) => {
                     return {

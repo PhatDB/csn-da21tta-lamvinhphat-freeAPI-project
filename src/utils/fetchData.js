@@ -4,7 +4,7 @@ const PLACES_BASE_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo/cities';
 const WEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather?lat=';
 const WEATHER_API_KEY = 'ca4e4f1b61367f941c9aa24526ee3129';
 
-export const getPlacesData = async (inputValue) => {
+export const getCitiesData = async (inputValue) => {
     try {
         const {
             data: { data },
@@ -32,7 +32,7 @@ export const getCurrenWeatherData = async (coords) => {
         console.log(error);
     }
 };
-export const getData = async (coords) => {
+export const getPlacesData = async (coords) => {
     try {
         const { data } = await axios('https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng', {
             params: {
