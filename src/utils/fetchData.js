@@ -64,3 +64,21 @@ export const getPlacesData = async (coords) => {
         console.log(error);
     }
 };
+
+export const getCurrencyConvert = async (codeFromCurrency, codeToCurrency) => {
+    try {
+        const { data } = await axios('https://exchange-rate-api1.p.rapidapi.com/convert', {
+            params: {
+                base: codeFromCurrency,
+                target: codeToCurrency,
+            },
+            headers: {
+                'X-RapidAPI-Key': 'a3ab42bb6dmsh9f66c2ddc18146ap14dfc3jsn8cee64e06fe7',
+                'X-RapidAPI-Host': 'exchange-rate-api1.p.rapidapi.com',
+            },
+        });
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+};

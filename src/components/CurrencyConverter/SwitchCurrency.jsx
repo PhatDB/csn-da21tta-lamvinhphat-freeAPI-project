@@ -1,11 +1,16 @@
 import { Button, Grid } from '@mui/material';
-import React from 'react';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 
-const SwitchCurrency = () => {
+const SwitchCurrency = (props) => {
+    const { formCurrency, setFromCurrency, toCurrency, setToCurrency } = props;
+    const handleClick = () => {
+        setFromCurrency(toCurrency);
+        setToCurrency(formCurrency);
+    };
     return (
         <Grid item xs={12} md='auto'>
             <Button
+                onClick={handleClick}
                 sx={{
                     borderRadius: 1,
                     height: '100%',
