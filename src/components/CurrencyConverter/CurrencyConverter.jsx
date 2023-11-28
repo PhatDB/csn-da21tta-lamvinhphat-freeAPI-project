@@ -4,9 +4,9 @@ import InputAmount from './InputAmount';
 import SwitchCurrency from './SwitchCurrency';
 import SelectCountry from './SelectCountry';
 
-const CurrencyConverter = () => {
+const CurrencyConverter = (currenWeather) => {
     return (
-        <Container maxWidth='md' sx={{ marginTop: '2rem', background: '#f7f7f7' }}>
+        <Container maxWidth='md' sx={{ marginTop: '2rem', background: '#f7f7f7', borderRadius: 2 }}>
             <Grid container spacing={2}>
                 <InputAmount />
                 <SelectCountry />

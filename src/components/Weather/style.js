@@ -7,11 +7,11 @@ export const style = {
     },
     countryName: {
         fontWeight: 600,
-        fontSize: '30px',
+        fontSize: '20px',
         lineHeight: '1',
         letterSpacing: '1px',
     },
-    weatherStatus: { fontWeight: 400, fontSize: '20px' },
+    weatherStatus: { fontWeight: 400, fontSize: '14px' },
     cardMedia: { height: '100px', width: '100px' },
     temperature: {
         fontWeight: '600px',

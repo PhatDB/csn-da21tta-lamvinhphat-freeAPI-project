@@ -1,42 +1,33 @@
-import { CssBaseline } from '@mui/material';
+import { Box, Card, CardMedia, Container, CssBaseline, Grid, Typography } from '@mui/material';
 import Header from './components/Header/Header';
 import CurrencyConverter from './components/CurrencyConverter/CurrencyConverter';
-import Weather from './components/Weather/Weather';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
 import { useEffect, useState } from 'react';
-import { getCurrenWeatherData, getPlacesData } from './utils/fetchData';
+import { getCurrenWeatherData, getDailyWeatherData } from './utils/fetchData';
+import Weather from './components/Weather/Weather';
 
 const App = () => {
     const [search, setSearch] = useState('');
-    const [coords, setCoords] = useState({ lat: 12.254444444, lon: 109.166666666 });
+    const [coords, setCoords] = useState({ lat: 12.24507, lon: 109.19432 });
 
-    const handleOnChange = (searchData) => {
-        setSearch(searchData);
-        const [lat, lon] = searchData.value.split(' ');
-        setCoords({ lat: lat, lon: lon });
-    };
-
-    useEffect(()=>{
-        getCurrenWeatherData(coords).then((data) => {
-            console.log(data);
-        });
-    },[coords])
+    const [currenWeather, setCurrenWeather] = useState([]);
+    const [dailyWeather, setDailyWeather] = useState([]);
 
     useEffect(() => {
-        getPlacesData(coords).then((data) => {
-            console.log(data);
+        getCurrenWeatherData(coords).then((data) => {
+            setCurrenWeather([data]);
+        });
+        getDailyWeatherData(coords).then((data) => {
+            setDailyWeather(data.list);
         });
     }, [coords]);
-
     return (
         <>
             <CssBaseline />
-            <Header search={search} setSearch={setSearch} handleOnChange={handleOnChange} />
-            <CurrencyConverter />
-            <Weather />
-            <Main />
-            <Footer />
+            <Box sx={{ background: '#DEF1FF', height: '100vh' }}>
+                <Header search={search} setSearch={setSearch} setCoords={setCoords} />
+                <CurrencyConverter />
+                <Weather currenData={currenWeather} dailyData={dailyWeather} />
+            </Box>
         </>
     );
 };

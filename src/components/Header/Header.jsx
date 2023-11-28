@@ -3,7 +3,13 @@ import { AsyncPaginate } from 'react-select-async-paginate';
 import { getCitiesData } from '../../utils/fetchData';
 
 const Header = (props) => {
-    const { search, handleOnChange } = props;
+    const { search, setSearch, setCoords } = props;
+
+    const handleOnChange = (searchData) => {
+        setSearch(searchData);
+        const [lat, lon] = searchData.value.split(' ');
+        setCoords({ lat: lat, lon: lon });
+    };
 
     const loadOptions = (input) => {
         return getCitiesData(input).then((data) => {
