@@ -17,7 +17,7 @@ const CurrencyConverter = () => {
 
     useEffect(() => {
         getCurrencyConvert(codeFromCurrency, codeToCurrency).then((data) => {
-            setResultCurrency(data.convert_result.rate);
+            setResultCurrency(data.conversion_rate);
         });
     }, [fistAmount, formCurrency, toCurrency]);
 
@@ -36,11 +36,22 @@ const CurrencyConverter = () => {
                 />
                 <SelectCountry value={toCurrency} setValue={setToCurrency} label='To' />
             </Grid>
-            <Box sx={{ textAlign: 'left', marginTop: '1rem' }}>
-                <Typography>
+            <Box
+                sx={{
+                    textAlign: 'left',
+                    margin: '1rem',
+                    display: 'flex',
+                    justifyContent: 'space-evenly',
+                    paddingBottom: '1rem',
+                }}
+            >
+                <Typography variant='h5' sx={{ fontWeight: 'bold' }}>
                     {fistAmount} {formCurrency}
                 </Typography>
-                <Typography variant='h5' sx={{ marginTop: '5px', fontWeight: 'bold' }}>
+                <Typography variant='h5' sx={{ fontWeight: 'bold' }}>
+                    =
+                </Typography>
+                <Typography variant='h5' sx={{ fontWeight: 'bold' }}>
                     {resultCurrency * fistAmount} {toCurrency}
                 </Typography>
             </Box>
