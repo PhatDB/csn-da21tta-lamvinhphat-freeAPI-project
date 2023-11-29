@@ -43,6 +43,7 @@ const App = () => {
             setIsLoading(false);
         });
     }, [coords, type]);
+
     return (
         <>
             <CssBaseline />
