@@ -46,9 +46,11 @@ export const getDailyWeatherData = async (coords) => {
     }
 };
 
-export const getPlacesData = async (coords) => {
+export const getPlacesData = async (coords, type) => {
     try {
-        const { data } = await axios('https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng', {
+        const {
+            data: { data },
+        } = await axios(`https://travel-advisor.p.rapidapi.com/${type}/list-by-latlng`, {
             params: {
                 latitude: coords.lat,
                 longitude: coords.lon,

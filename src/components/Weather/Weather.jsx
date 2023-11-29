@@ -1,5 +1,4 @@
 import { Box, Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
-import React from 'react';
 import { style } from './style';
 
 const WEEK_DAYS = ['Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat', 'Sun'];

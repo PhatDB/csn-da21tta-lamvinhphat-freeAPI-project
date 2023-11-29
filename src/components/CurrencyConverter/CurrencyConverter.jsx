@@ -21,8 +21,6 @@ const CurrencyConverter = () => {
         });
     }, [fistAmount, formCurrency, toCurrency]);
 
-    console.log(resultCurrency);
-
     return (
         <Container maxWidth='md' sx={{ marginTop: '2rem', background: '#f7f7f7', borderRadius: 2 }}>
             <Grid container spacing={2}>
