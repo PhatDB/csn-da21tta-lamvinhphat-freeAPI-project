@@ -29,7 +29,7 @@ const Header = (props) => {
             <Toolbar>
                 <Container maxWidth='md' sx={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
                     <Typography variant='h3' align='center' gutterBottom>
-                        Travel Advisor
+                        Travel With Me!!!
                     </Typography>
                     <Box sx={{ color: '#333', backgroundColor: '#fff' }}>
                         <AsyncPaginate
