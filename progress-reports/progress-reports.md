@@ -16,3 +16,8 @@
   ### GVHD đã duyệt
 
 ## Tuần 3 từ ngày 04/12/2023 - 10/12/2023
+
+-  Xây dựng chức năng tìm kiếm những địa điểm du lịch cho người dùng theo thành phố `hoàn thành`✅
+-  Chạy Demo với GVHD `hoàn thành`✅
+-  Báo cáo tiến độ trên Github `hoàn thành`✅
+-  Gửi file raw quyển báo cáo cho GVHD `hoàn thành`✅
