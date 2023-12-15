@@ -1,4 +1,4 @@
-import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, CardMedia, Container, Toolbar, Typography } from '@mui/material';
 import { AsyncPaginate } from 'react-select-async-paginate';
 import { getCitiesData } from '../../utils/fetchData';
 
@@ -26,12 +26,12 @@ const Header = (props) => {
 
     return (
         <AppBar position='relative'>
-            <Toolbar>
-                <Container maxWidth='md' sx={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
+            <Toolbar sx={{ backgroundColor: '#003C71' }}>
+                <Container maxWidth='xl' sx={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
                     <Typography variant='h3' align='center' gutterBottom>
-                        Travel With Me!!!
+                        The world is yours to explore
                     </Typography>
-                    <Box sx={{ color: '#333', backgroundColor: '#fff' }}>
+                    <Box sx={{ color: '#333', backgroundColor: '#fff', maxWidth: 'md', margin: '0 auto' }}>
                         <AsyncPaginate
                             placeholder='Search for city...'
                             debounceTimeout={600}
