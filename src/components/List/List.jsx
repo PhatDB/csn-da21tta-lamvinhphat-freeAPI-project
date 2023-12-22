@@ -5,8 +5,6 @@ import PlacesDetails from '../PlacesDetails/PlacesDetails';
 const List = (props) => {
     const { placesData, type, setType, rating, setRating, isLoading } = props;
     const placesDataFilter = placesData.filter((item) => 'ranking' in item);
-    console.log(placesDataFilter);
-
     return (
         <Container maxWidth='xl' sx={{ padding: '2rem' }}>
             {isLoading ? (
@@ -20,7 +18,6 @@ const List = (props) => {
                     </Typography>
                     <Box display='flex' justifyContent='center'>
                         <StyledFromControl>
-                            <InputLabel>Type</InputLabel>
                             <Select value={type} onChange={(e) => setType(e.target.value)}>
                                 <MenuItem value='restaurants'>Restaurants</MenuItem>
                                 <MenuItem value='hotels'>Hotels</MenuItem>

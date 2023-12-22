@@ -1,10 +1,18 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Chip, Rating, Typography } from '@mui/material';
+import styled from '@emotion/styled';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 
+const HoverCard = styled(Card)({
+    transition: 'transform 0.3s',
+    '&:hover': {
+        transform: 'scale(1.05)',
+    },
+});
+
 const PlacesDetails = ({ data }) => {
     return (
-        <Card sx={{ minHeight: 710 }}>
+        <HoverCard sx={{ minHeight: 710 }}>
             <CardMedia
                 sx={{ height: 350 }}
                 image={
@@ -20,14 +28,21 @@ const PlacesDetails = ({ data }) => {
                 </Typography>
                 <Box display='flex' justifyContent='space-between'>
                     <Rating size='small' value={Number(data.rating)} readOnly />
-                    <Typography variant='subtitle1'>Price</Typography>
+                    <Typography variant='subtitle1' fontWeight='600'>
+                        Price
+                    </Typography>
                     <Typography variant='subtitle1'>{data.price}</Typography>
-                    <Typography gutterBottom variant='subtitle1'>
+                    <Typography variant='subtitle1' fontWeight='600'>
+                        Price Level
+                    </Typography>
+                    <Typography gutterBottom variant='subtitle1' color='red'>
                         {data.price_level}
                     </Typography>
                 </Box>
                 <Box display='flex' justifyContent='space-between'>
-                    <Typography variant='subtitle1'>Ranking</Typography>
+                    <Typography variant='subtitle1' fontWeight='600'>
+                        Ranking
+                    </Typography>
                     <Typography gutterBottom variant='subtitle1'>
                         {data.ranking}
                     </Typography>
@@ -81,7 +96,7 @@ const PlacesDetails = ({ data }) => {
                     </Button>
                 </CardActions>
             </CardContent>
-        </Card>
+        </HoverCard>
     );
 };
 

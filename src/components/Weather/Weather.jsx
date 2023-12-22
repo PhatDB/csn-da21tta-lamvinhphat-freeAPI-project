@@ -1,13 +1,10 @@
 import { Box, Card, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import { style } from './style';
 
-const WEEK_DAYS = ['Mon', 'Tue', 'Wen', 'Thu', 'Fri', 'Sat', 'Sun'];
+const TIME_DAY = ['6:00', '9:00', '12:00', '15:00', '18:00', '21:00', '24:00'];
 
 const Weather = (props) => {
     const { currenData, dailyData } = props;
-
-    const dayInWeek = new Date().getDay();
-    const forecastDays = WEEK_DAYS.slice(dayInWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInWeek));
 
     return (
         <>
@@ -74,7 +71,7 @@ const Weather = (props) => {
                                     alignItems: 'center',
                                 }}
                             >
-                                <Typography align='center'>{forecastDays[index]}</Typography>
+                                <Typography align='center'>{TIME_DAY[index]}</Typography>
                                 <CardMedia
                                     sx={{ height: '50px', width: '50px' }}
                                     image={`https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png`}
