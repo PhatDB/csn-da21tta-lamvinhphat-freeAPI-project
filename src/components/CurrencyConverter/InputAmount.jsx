@@ -13,6 +13,9 @@ const InputAmount = (props) => {
                 InputProps={{
                     type: 'number',
                     startAdornment: <InputAdornment position='start'>$</InputAdornment>,
+                    inputProps: {
+                        min: 0,
+                    },
                 }}
             />
         </Grid>

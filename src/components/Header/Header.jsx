@@ -1,4 +1,4 @@
-import { AppBar, Box, CardMedia, Container, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Container, Toolbar, Typography } from '@mui/material';
 import { AsyncPaginate } from 'react-select-async-paginate';
 import { getCitiesData } from '../../utils/fetchData';
 

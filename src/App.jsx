@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Container, CssBaseline, Grid, Typography } from '@mui/material';
+import { Box, CssBaseline } from '@mui/material';
 import Header from './components/Header/Header';
 import CurrencyConverter from './components/CurrencyConverter/CurrencyConverter';
 import { useEffect, useState } from 'react';
