@@ -30,3 +30,8 @@
 -   Chạy Demo lần cuối với GVHD `hoàn thành`✅
 -   Chỉnh sửa quyển báo cáo `hoàn thành`✅
 -   Báo cáo tiến độ trên Github `hoàn thành`✅
+
+## Tuần 5 từ ngày 01/01/2023 - 07/01/2023
+-   Hoàn thành các chức năng của website `hoàn thành`✅
+-   Hoàn thiện quyển báo cáo `hoàn thành`✅
+-   Báo cáo tiến độ trên Github `hoàn thành`✅
