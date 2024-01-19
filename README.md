@@ -8,3 +8,6 @@ Dự án này là một trang web du lịch đơn giản với API miễn phí �
    ```bash
    git clone https://github.com/PhatDB/csn-da21tta-lamvinhphat-freeAPI-travel-website.git
 2. **Cài Đặt Dependencies:**
+   ```bash
+   cd csn-da21tta-lamvinhphat-freeAPI-travel-website
+   npm install
