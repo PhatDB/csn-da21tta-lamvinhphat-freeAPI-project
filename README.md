@@ -39,5 +39,5 @@ Quy đổi tiền tệ.
 ## Đóng Góp
 Nếu bạn muốn đóng góp vào dự án, xin vui lòng tạo một pull request và mô tả chi tiết về sự thay đổi của bạn.
 
-## Đóng Góp
-Nếu bạn muốn đóng góp vào dự án, xin vui lòng tạo một pull request và mô tả chi tiết về sự thay đổi của bạn.
+## Báo Lỗi
+Nếu bạn gặp vấn đề hoặc phát hiện lỗi, vui lòng tạo một issue trên trang GitHub của dự án.
